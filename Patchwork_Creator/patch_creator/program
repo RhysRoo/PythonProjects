@@ -1,0 +1,163 @@
+from patches import *
+
+
+def main():
+    screenSize = int(input("What is the screensize: "))
+    win = GraphWin("Test", screenSize, screenSize)
+    colours = ["blue", "orange", "red", "white"]
+
+    if screenSize == 500:
+
+        for y in range(0, 401, 100):
+            colour = colours[0]
+            mypatch1(win, colour[0])
+        
+        
+        for y in range(0, 401, 100):
+            if y == 0:
+                colour = colours[1]
+                patchF(win, colour, Point(100, y))
+
+            if y >= 100 and y <= 300:
+                colour = colours[2]
+                patchP(win, colour, Point(100, y))
+
+            if y == 400:
+                colour = colours[2]
+                patchB(win, colour, Point(100, y))
+            
+        for y in range(0, 401, 100):
+            if y == 0:
+                colour = colours[1]
+                patchF(win, colour, Point(200, y))
+            if y >= 100 and y <= 100:
+                colour = colours[1]
+                patchB(win, colour, Point(200, y))
+            if y >= 200 and y <= 300:
+                colour = colours[0]
+                patchP(win, colour, Point(200, y))
+            if  y == 400:
+                colour = colours[0]
+                patchB(win, colour, Point(200, y))
+
+        for y in range(0, 401, 100):
+            if y == 0:
+                colour = colours[1]
+                patchF(win, colour, Point(300, y))
+            if y >= 100 and y <= 200:
+                colour = colours[1]
+                patchB(win, colour, Point(300, y))
+            if y == 300:
+                colour = colours[2]
+                patchP(win, colour, Point(300, y))
+            if y == 400:
+                colour = colours[2]
+                patchB(win, colour, Point(300, y))
+
+        for y in range(0, 401, 100):
+            if y >= 0 and y <= 300:
+                colour = colours[1]
+                patchF(win, colour, Point(400, y))
+            if y == 400:
+                colour = colours[0]
+                patchB(win, colour, Point(400, y))
+                    
+
+        win.getMouse()
+
+    
+    elif screenSize == 700:
+
+        for y in range(0, 701, 100):
+            colour = colours[0]
+            patchB(win, colour, Point(0, y))
+        
+        
+        for y in range(0, 701, 100):
+            if y == 0:
+                colour = colours[1]
+                patchF(win, colour, Point(100, y))
+
+            if y >= 100 and y <= 500:
+                colour = colours[2]
+                patchP(win, colour, Point(100, y))
+
+            if y == 600:
+                colour = colours[2]
+                patchB(win, colour, Point(100, y))
+            
+        for y in range(0, 701, 100):
+            if y == 0:
+                colour = colours[1]
+                patchF(win, colour, Point(200, y))
+            if y >= 100 and y <= 100:
+                colour = colours[1]
+                patchB(win, colour, Point(200, y))
+            if y >= 200 and y <= 500:
+                colour = colours[0]
+                patchP(win, colour, Point(200, y))
+            if  y == 600:
+                colour = colours[0]
+                patchB(win, colour, Point(200, y))
+
+        for y in range(0, 701, 100):
+            if y == 0:
+                colour = colours[1]
+                patchF(win, colour, Point(300, y))
+            if y >= 100 and y <= 200:
+                colour = colours[1]
+                patchB(win, colour, Point(300, y))
+            if y >= 300 and y <= 500:
+                colour = colours[2]
+                patchP(win, colour, Point(300, y))
+            if y == 600:
+                colour = colours[2]
+                patchB(win, colour, Point(300, y))
+
+        for y in range(0, 701, 100):
+            if y == 0:
+                colour = colours[1]
+                patchF(win, colour, Point(400, y))
+            if y >= 100 and y <= 300:
+                colour = colours[1]
+                patchB(win, colour, Point(400, y))
+            if y >= 400 and y <= 500:
+                colour = colours[0]
+                patchP(win, colour, Point(400, y))
+            if y == 600:
+                colour = colours[0]
+                patchB(win, colour, Point(400, y))
+
+        for y in range(0, 701, 100):
+            if y == 0:
+                colour = colours[1]
+                patchF(win, colour, Point(500, y))
+            if y >= 100 and y <= 400:
+                colour = colours[1]
+                patchB(win, colour, Point(500, y))
+            if y == 500:
+                colour = colours[2]
+                patchP(win, colour, Point(500, y))
+            if y == 600:
+                colour = colours[2]
+                patchB(win, colour, Point(500, y))
+
+
+        for y in range(0, 701, 100):
+            if y >= 0 and y <= 500:
+                colour = colours[1]
+                patchF(win, colour, Point(600, y))
+            if y == 500:
+                colour = colours
+            if y == 600:
+                colour = colours[0]
+                patchB(win, colour, Point(600, y))
+
+        win.getMouse()
+        win.close()
+    
+    else:
+        print("Invalid screensize")
+
+
+main()
